@@ -38,7 +38,7 @@ class SpamChecker
         ]);
         $headers = $response->getHeaders();
         $content = $response->getContent();
-        if ('discard' === ($headers['x-akismet-pro-tip'][0] ?? '') or $content) {
+        if ('discard' === ($headers['x-akismet-pro-tip'][0] ?? '') or $content ==="true") {
             return 2;
         }
 
